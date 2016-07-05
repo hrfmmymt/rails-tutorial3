@@ -38,6 +38,8 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
 
+  private
+
   # メールアドレスをすべて小文字にする
   def downcase_email
     self.email = email.downcase
